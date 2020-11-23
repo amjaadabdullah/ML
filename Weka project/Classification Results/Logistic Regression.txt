@@ -1,0 +1,76 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.Logistic -R 1.0E-8 -M -1 -num-decimal-places 4
+Relation:     AppleStore-weka.filters.unsupervised.attribute.Remove-R2-3-weka.filters.unsupervised.attribute.AddExpression-Ea2/1000000-Nexpression-weka.filters.unsupervised.attribute.Remove-R3-weka.filters.unsupervised.attribute.Remove-R8-weka.filters.unsupervised.attribute.Remove-R11-weka.filters.unsupervised.attribute.Remove-R12-weka.filters.unsupervised.attribute.InterquartileRange-R3-O3.0-E299.99-weka.filters.unsupervised.attribute.Remove-R13-14-weka.filters.unsupervised.attribute.InterquartileRange-R3-O3.0-E299.99-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C3-Llast-weka.filters.unsupervised.attribute.Remove-R13-14-weka.filters.unsupervised.attribute.Discretize-B5-M-1.0-R6-precision6-weka.filters.unsupervised.attribute.Remove-R2-weka.filters.unsupervised.attribute.Reorder-R1,2,4,5,6,7,3
+Instances:    7186
+Attributes:   6
+              price
+              user_rating_ver
+              sup_devices.num
+              lang.num
+              size_mega
+              user_rating
+Test mode:    split 70.0% train, remainder test
+
+=== Classifier model (full training set) ===
+
+Logistic Regression with ridge parameter of 1.0E-8
+Coefficients...
+                        Class
+Variable           '(-inf-1]'     '(1-2]'     '(2-3]'     '(3-4]'
+=================================================================
+price                 -0.0187     -0.0161     -0.0568      0.0028
+user_rating_ver        -2.834     -1.0654     -0.8717      -0.539
+sup_devices.num        0.1467      0.0059     -0.0526     -0.0155
+lang.num              -0.0744     -0.0718     -0.0278     -0.0034
+size_mega                   0     -0.0034     -0.0002      0.0002
+Intercept             -1.9985      1.0672      3.6725      2.3839
+
+
+Odds Ratios...
+                        Class
+Variable           '(-inf-1]'     '(1-2]'     '(2-3]'     '(3-4]'
+=================================================================
+price                  0.9815       0.984      0.9447      1.0028
+user_rating_ver        0.0588      0.3446      0.4182      0.5833
+sup_devices.num         1.158       1.006      0.9488      0.9846
+lang.num               0.9283      0.9308      0.9725      0.9966
+size_mega                   1      0.9966      0.9998      1.0002
+
+
+Time taken to build model: 1.69 seconds
+
+=== Evaluation on test split ===
+
+Time taken to test model on test split: 0.3 seconds
+
+=== Summary ===
+
+Correctly Classified Instances        1201               55.705  %
+Incorrectly Classified Instances       955               44.295  %
+Kappa statistic                          0.3058
+Mean absolute error                      0.2129
+Root mean squared error                  0.3273
+Relative absolute error                 78.6615 %
+Root relative squared error             89.2604 %
+Total Number of Instances             2156     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.939    0.081    0.616      0.939    0.744      0.721    0.968     0.715     '(-inf-1]'
+                 0.000    0.000    ?          0.000    ?          ?        0.863     0.188     '(1-2]'
+                 0.006    0.004    0.111      0.006    0.011      0.008    0.817     0.280     '(2-3]'
+                 0.142    0.121    0.386      0.142    0.207      0.029    0.695     0.494     '(3-4]'
+                 0.913    0.509    0.576      0.913    0.706      0.430    0.815     0.718     '(4-inf)'
+Weighted Avg.    0.557    0.272    ?          0.557    ?          ?        0.793     0.594     
+
+=== Confusion Matrix ===
+
+   a   b   c   d   e   <-- classified as
+ 245   0   0  16   0 |   a = '(-inf-1]'
+   8   0   1  29   5 |   b = '(1-2]'
+  25   0   1 102  39 |   c = '(2-3]'
+  63   0   6 107 580 |   d = '(3-4]'
+  57   0   1  23 848 |   e = '(4-inf)'
+

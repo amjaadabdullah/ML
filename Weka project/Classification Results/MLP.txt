@@ -1,0 +1,149 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.MultilayerPerceptron -L 0.3 -M 0.2 -N 500 -V 0 -S 0 -E 20 -H a
+Relation:     AppleStore-weka.filters.unsupervised.attribute.Remove-R2-3-weka.filters.unsupervised.attribute.AddExpression-Ea2/1000000-Nexpression-weka.filters.unsupervised.attribute.Remove-R3-weka.filters.unsupervised.attribute.Remove-R8-weka.filters.unsupervised.attribute.Remove-R11-weka.filters.unsupervised.attribute.Remove-R12-weka.filters.unsupervised.attribute.InterquartileRange-R3-O3.0-E299.99-weka.filters.unsupervised.attribute.Remove-R13-14-weka.filters.unsupervised.attribute.InterquartileRange-R3-O3.0-E299.99-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C3-Llast-weka.filters.unsupervised.attribute.Remove-R13-14-weka.filters.unsupervised.attribute.Discretize-B5-M-1.0-R6-precision6-weka.filters.unsupervised.attribute.Remove-R2-weka.filters.unsupervised.attribute.Reorder-R1,2,4,5,6,7,3
+Instances:    7186
+Attributes:   6
+              price
+              user_rating_ver
+              sup_devices.num
+              lang.num
+              size_mega
+              user_rating
+Test mode:    split 70.0% train, remainder test
+
+=== Classifier model (full training set) ===
+
+Sigmoid Node 0
+    Inputs    Weights
+    Threshold    1.5823996486370218
+    Node 5    -2.4939225087564636
+    Node 6    -5.861277861628392
+    Node 7    -1.8929504342692107
+    Node 8    -4.293706510858428
+    Node 9    -2.3796678479782205
+Sigmoid Node 1
+    Inputs    Weights
+    Threshold    -3.511285892570373
+    Node 5    -3.3602189905072537
+    Node 6    -3.0849196169538935
+    Node 7    -1.3599449396519798
+    Node 8    3.5787274509015154
+    Node 9    -0.3615976373590089
+Sigmoid Node 2
+    Inputs    Weights
+    Threshold    -2.9392029990168975
+    Node 5    -2.868070815907005
+    Node 6    0.9767198891533238
+    Node 7    0.47790235850339496
+    Node 8    2.0949913760646153
+    Node 9    -1.8602188802054276
+Sigmoid Node 3
+    Inputs    Weights
+    Threshold    -2.516663313517675
+    Node 5    1.5640159617222593
+    Node 6    0.9284515699119076
+    Node 7    1.4140406789366688
+    Node 8    0.7241260119824457
+    Node 9    -2.938009554978166
+Sigmoid Node 4
+    Inputs    Weights
+    Threshold    -1.78818538899081
+    Node 5    1.9183457400215402
+    Node 6    -0.30621186195097844
+    Node 7    0.20964485321731813
+    Node 8    -0.617342688449406
+    Node 9    3.0489527933861638
+Sigmoid Node 5
+    Inputs    Weights
+    Threshold    8.16725956609875
+    Attrib price    8.419850784155305
+    Attrib user_rating_ver    19.852025642454766
+    Attrib sup_devices.num    0.7335805231058199
+    Attrib lang.num    6.318828510658385
+    Attrib size_mega    1.1615729031615722
+Sigmoid Node 6
+    Inputs    Weights
+    Threshold    2.0275836629771367
+    Attrib price    -1.3000870865070528
+    Attrib user_rating_ver    18.36479925552331
+    Attrib sup_devices.num    -4.771119010416648
+    Attrib lang.num    0.34285621860421184
+    Attrib size_mega    -2.096387015895833
+Sigmoid Node 7
+    Inputs    Weights
+    Threshold    11.087996913733528
+    Attrib price    -1.7263196874086364
+    Attrib user_rating_ver    -17.29578135673304
+    Attrib sup_devices.num    -18.67137203445894
+    Attrib lang.num    21.75468331712066
+    Attrib size_mega    0.8031527417728784
+Sigmoid Node 8
+    Inputs    Weights
+    Threshold    5.239436706326813
+    Attrib price    -8.344715618590033
+    Attrib user_rating_ver    18.4814422424549
+    Attrib sup_devices.num    -6.193760676294125
+    Attrib lang.num    -1.5530148735194362
+    Attrib size_mega    0.8103240528930395
+Sigmoid Node 9
+    Inputs    Weights
+    Threshold    -20.65014415549544
+    Attrib price    4.723007496340482
+    Attrib user_rating_ver    37.17111724595095
+    Attrib sup_devices.num    -0.9373466656679678
+    Attrib lang.num    1.0646063174585136
+    Attrib size_mega    -2.5975795931939563
+Class '(-inf-1]'
+    Input
+    Node 0
+Class '(1-2]'
+    Input
+    Node 1
+Class '(2-3]'
+    Input
+    Node 2
+Class '(3-4]'
+    Input
+    Node 3
+Class '(4-inf)'
+    Input
+    Node 4
+
+
+Time taken to build model: 10.92 seconds
+
+=== Evaluation on test split ===
+
+Time taken to test model on test split: 0.13 seconds
+
+=== Summary ===
+
+Correctly Classified Instances        1467               68.0427 %
+Incorrectly Classified Instances       689               31.9573 %
+Kappa statistic                          0.5342
+Mean absolute error                      0.1732
+Root mean squared error                  0.3052
+Relative absolute error                 63.9942 %
+Root relative squared error             83.2142 %
+Total Number of Instances             2156     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.973    0.087    0.606      0.973    0.747      0.730    0.970     0.736     '(-inf-1]'
+                 0.419    0.020    0.300      0.419    0.350      0.339    0.889     0.323     '(1-2]'
+                 0.419    0.039    0.473      0.419    0.444      0.402    0.814     0.369     '(2-3]'
+                 0.529    0.117    0.709      0.529    0.606      0.447    0.743     0.627     '(3-4]'
+                 0.780    0.196    0.751      0.780    0.766      0.582    0.816     0.702     '(4-inf)'
+Weighted Avg.    0.680    0.139    0.688      0.680    0.674      0.534    0.810     0.647     
+
+=== Confusion Matrix ===
+
+   a   b   c   d   e   <-- classified as
+ 254   5   1   1   0 |   a = '(-inf-1]'
+   9  18  10   4   2 |   b = '(1-2]'
+  26  23  70  31  17 |   c = '(2-3]'
+  69   9  57 400 221 |   d = '(3-4]'
+  61   5  10 128 725 |   e = '(4-inf)'
+

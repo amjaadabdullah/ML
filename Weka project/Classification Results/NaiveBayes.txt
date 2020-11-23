@@ -1,0 +1,90 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.bayes.NaiveBayes 
+Relation:     AppleStore-weka.filters.unsupervised.attribute.Remove-R2-3-weka.filters.unsupervised.attribute.AddExpression-Ea2/1000000-Nexpression-weka.filters.unsupervised.attribute.Remove-R3-weka.filters.unsupervised.attribute.Remove-R8-weka.filters.unsupervised.attribute.Remove-R11-weka.filters.unsupervised.attribute.Remove-R12-weka.filters.unsupervised.attribute.InterquartileRange-R3-O3.0-E299.99-weka.filters.unsupervised.attribute.Remove-R13-14-weka.filters.unsupervised.attribute.InterquartileRange-R3-O3.0-E299.99-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C3-Llast-weka.filters.unsupervised.attribute.Remove-R13-14-weka.filters.unsupervised.attribute.Discretize-B5-M-1.0-R6-precision6-weka.filters.unsupervised.attribute.Remove-R2-weka.filters.unsupervised.attribute.Reorder-R1,2,4,5,6,7,3
+Instances:    7186
+Attributes:   6
+              price
+              user_rating_ver
+              sup_devices.num
+              lang.num
+              size_mega
+              user_rating
+Test mode:    split 70.0% train, remainder test
+
+=== Classifier model (full training set) ===
+
+Naive Bayes Classifier
+
+                       Class
+Attribute         '(-inf-1]'    '(1-2]'    '(2-3]'    '(3-4]'  '(4-inf)'
+                      (0.14)     (0.02)     (0.08)     (0.32)     (0.44)
+=========================================================================
+price
+  mean                 0.8827     0.3727     0.7414     1.5808     1.2789
+  std. dev.            3.5407     1.7479     2.4616     9.0303     4.3299
+  weight sum              971        161        578       2326       3150
+  precision            8.5711     8.5711     8.5711     8.5711     8.5711
+
+user_rating_ver
+  mean                 0.0492     1.8012     2.4337     3.4695     4.1813
+  std. dev.            0.2286     1.1227     1.3142     1.2969     1.1634
+  weight sum              971        161        578       2326       3150
+  precision            0.5556     0.5556     0.5556     0.5556     0.5556
+
+sup_devices.num
+  mean                37.6993    36.9317     36.045    36.7094    37.0876
+  std. dev.            2.5269     4.1286     4.2733     4.3774     3.8472
+  weight sum              971        161        578       2326       3150
+  precision                 2          2          2          2          2
+
+lang.num
+  mean                 2.4027     2.8366     4.3631     5.9681     6.4826
+  std. dev.            4.5096     4.3861     7.1332     8.6124     7.9871
+  weight sum              971        161        578       2326       3150
+  precision            1.3393     1.3393     1.3393     1.3393     1.3393
+
+size_mega
+  mean               150.6399    80.1908   154.1054   228.3165   207.3119
+  std. dev.          390.1049    88.3529   274.2014   386.1122   347.8383
+  weight sum              971        161        578       2326       3150
+  precision            0.5674     0.5674     0.5674     0.5674     0.5674
+
+
+
+Time taken to build model: 0.19 seconds
+
+=== Evaluation on test split ===
+
+Time taken to test model on test split: 0.23 seconds
+
+=== Summary ===
+
+Correctly Classified Instances        1161               53.8497 %
+Incorrectly Classified Instances       995               46.1503 %
+Kappa statistic                          0.2964
+Mean absolute error                      0.2019
+Root mean squared error                  0.3582
+Relative absolute error                 74.6111 %
+Root relative squared error             97.6861 %
+Total Number of Instances             2156     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.931    0.079    0.618      0.931    0.743      0.720    0.963     0.667     '(-inf-1]'
+                 0.535    0.037    0.225      0.535    0.317      0.328    0.802     0.186     '(1-2]'
+                 0.072    0.008    0.429      0.072    0.123      0.151    0.734     0.258     '(2-3]'
+                 0.106    0.064    0.471      0.106    0.173      0.074    0.677     0.471     '(3-4]'
+                 0.864    0.538    0.549      0.864    0.671      0.346    0.786     0.708     '(4-inf)'
+Weighted Avg.    0.538    0.265    0.514      0.538    0.456      0.280    0.765     0.575     
+
+=== Confusion Matrix ===
+
+   a   b   c   d   e   <-- classified as
+ 243   7   2   9   0 |   a = '(-inf-1]'
+   6  23   5   2   7 |   b = '(1-2]'
+  24  38  12  18  75 |   c = '(2-3]'
+  63  28   7  80 578 |   d = '(3-4]'
+  57   6   2  61 803 |   e = '(4-inf)'
+

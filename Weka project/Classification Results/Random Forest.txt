@@ -1,0 +1,58 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.RandomForest -P 100 -I 100 -num-slots 1 -K 0 -M 1.0 -V 0.001 -S 1
+Relation:     AppleStore-weka.filters.unsupervised.attribute.Remove-R2-3-weka.filters.unsupervised.attribute.AddExpression-Ea2/1000000-Nexpression-weka.filters.unsupervised.attribute.Remove-R3-weka.filters.unsupervised.attribute.Remove-R8-weka.filters.unsupervised.attribute.Remove-R11-weka.filters.unsupervised.attribute.Remove-R12-weka.filters.unsupervised.attribute.InterquartileRange-R3-O3.0-E299.99-weka.filters.unsupervised.attribute.Remove-R13-14-weka.filters.unsupervised.attribute.InterquartileRange-R3-O3.0-E299.99-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C3-Llast-weka.filters.unsupervised.attribute.Remove-R13-14-weka.filters.unsupervised.attribute.Discretize-B5-M-1.0-R6-precision6-weka.filters.unsupervised.attribute.Remove-R2-weka.filters.unsupervised.attribute.Reorder-R1,2,4,5,6,7,3
+Instances:    7186
+Attributes:   6
+              price
+              user_rating_ver
+              sup_devices.num
+              lang.num
+              size_mega
+              user_rating
+Test mode:    split 70.0% train, remainder test
+
+=== Classifier model (full training set) ===
+
+RandomForest
+
+Bagging with 100 iterations and base learner
+
+weka.classifiers.trees.RandomTree -K 0 -M 1.0 -V 0.001 -S 1 -do-not-check-capabilities
+
+Time taken to build model: 4.41 seconds
+
+=== Evaluation on test split ===
+
+Time taken to test model on test split: 0.45 seconds
+
+=== Summary ===
+
+Correctly Classified Instances        1370               63.5436 %
+Incorrectly Classified Instances       786               36.4564 %
+Kappa statistic                          0.456 
+Mean absolute error                      0.1699
+Root mean squared error                  0.3209
+Relative absolute error                 62.8013 %
+Root relative squared error             87.5055 %
+Total Number of Instances             2156     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.805    0.058    0.656      0.805    0.723      0.685    0.971     0.740     '(-inf-1]'
+                 0.349    0.013    0.349      0.349    0.349      0.336    0.875     0.246     '(1-2]'
+                 0.341    0.043    0.399      0.341    0.368      0.320    0.776     0.307     '(2-3]'
+                 0.512    0.174    0.614      0.512    0.558      0.355    0.731     0.603     '(3-4]'
+                 0.755    0.260    0.687      0.755    0.719      0.491    0.815     0.728     '(4-inf)'
+Weighted Avg.    0.635    0.184    0.629      0.635    0.629      0.450    0.802     0.643     
+
+=== Confusion Matrix ===
+
+   a   b   c   d   e   <-- classified as
+ 210   6  11  15  19 |   a = '(-inf-1]'
+   8  15   7   9   4 |   b = '(1-2]'
+  21  12  57  53  24 |   c = '(2-3]'
+  38   7  52 387 272 |   d = '(3-4]'
+  43   3  16 166 701 |   e = '(4-inf)'
+
